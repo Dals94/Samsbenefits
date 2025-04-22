@@ -28,9 +28,7 @@
       font-weight: bold;
       transition: 0.3s;
     }
-    nav a:hover {
-      color: #f7b500;
-    }
+    nav a:hover { color: #f7b500; }
     .banner {
       background: #333;
       color: white;
@@ -62,56 +60,8 @@
       font-size: 0.7rem;
       color: #ccc;
     }
-    /* Búsqueda */
-    .search-section {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 30px 0;
-      gap: 10px;
-    }
-    .search-section input {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 30px;
-      width: 200px;
-    }
-    .search-section button {
-      padding: 10px 20px;
-      border: none;
-      background-color: #F7B500;
-      color: #333;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .search-section button:hover {
-      background-color: #e0a200;
-    }
-    h2 {
-      text-align: center;
-      font-size: 2em;
-      margin: 30px 0 10px 0;
-      color: #2E65B1;
-    }
-    p.subtitle {
-      text-align: center;
-      color: #777;
-      margin-bottom: 20px;
-    }
-    .promo-img {
-      display: block;
-      max-width: 90%;
-      margin: 20px auto;
-      border-radius: 15px;
-      overflow: hidden;
-    }
-        /* Secciones de ahorro */
-    section {
-      padding: 50px 20px;
-      text-align: center;
-    }
+    /* Estilos de las tarjetas */
+    section { padding: 50px 20px; text-align: center; }
     .card-grid {
       display: flex;
       flex-wrap: wrap;
@@ -125,63 +75,57 @@
       padding: 20px;
       border-radius: 15px;
       width: 180px;
-      transition: 0.3s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .card:hover {
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      transform: translateY(-5px);
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
-    .card img {
-      height: 50px;
-      margin-bottom: 10px;
+    .blue-dark {
+      background: #0a2a66;
+      color: white;
     }
-    .card h4 {
-      font-size: 1em;
-      margin-bottom: 8px;
-      color: #2E65B1;
+    .blue {
+      background: #2E65B1;
+      color: white;
     }
-    .card p {
-      font-size: 0.9em;
-      color: #666;
+    .red {
+      background: #E53935;
+      color: white;
+    }
+    .green {
+      background: #66BB6A;
+      color: white;
     }
     .card button {
       margin-top: 10px;
-      background: #2E65B1;
-      color: white;
+      background: #fff;
+      color: #2E65B1;
       border: none;
       border-radius: 20px;
       padding: 8px 12px;
       cursor: pointer;
       font-size: 0.8em;
-      transition: 0.3s;
+      transition: background 0.3s, color 0.3s;
     }
     .card button:hover {
-      background: #1a4280;
+      background: #2E65B1;
+      color: white;
     }
-    footer {
-      background: #f0f0f0;
-      padding: 40px 20px;
+    h2 {
       text-align: center;
-    }
-    footer h3 {
+      font-size: 2em;
+      margin: 30px 0 10px 0;
       color: #2E65B1;
     }
-    footer a {
-      margin: 0 10px;
-      display: inline-block;
-    }
-    footer a img {
-      width: 30px;
-    }
-    footer p {
-      font-size: 0.8em;
+    p.subtitle {
+      text-align: center;
       color: #777;
-      max-width: 700px;
-      margin: auto;
-      margin-top: 10px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -205,46 +149,28 @@
   </div>
 </div>
 
-<div class="search-section">
-  <input type="text" placeholder="Busca tu marca favorita">
-  <input type="text" placeholder="Ciudad">
-  <button>Buscar</button>
-</div>
-
-<h2>Beneficios exclusivos para Socios Sam’s</h2>
-<p class="subtitle">Ofertas especiales en cine, restaurantes y más</p>
-
-<img src="https://cdn.samsclub.com.mx/media/cinepolis-promo.jpg" alt="Beneficio Cinepolis" class="promo-img">
-
-<section>
-  <h2>Ahorra todos los días con Sam’s Benefits y Plus</h2>
-  <p class="subtitle">Descuentos y promociones para tu familia</p>
-
-  <img src="https://cdn.samsclub.com.mx/media/freshsalads-promo.jpg" alt="FreshSalads 10% descuento" class="promo-img">
-</section>
-
 <section style="background: #f0f0f0;">
   <h2>Explora un mundo de ahorros exclusivos</h2>
   <p class="subtitle">Beneficios en restaurantes, salud, entretenimiento y más</p>
 
   <div class="card-grid">
-    <div class="card">
+    <div class="card blue-dark" data-aos="fade-up">
       <p>Mi mascota</p>
       <button>Ver más</button>
     </div>
-    <div class="card">
+    <div class="card blue" data-aos="fade-up">
       <p>Consentir a mi familia</p>
       <button>Ver más</button>
     </div>
-    <div class="card">
+    <div class="card red" data-aos="fade-up">
       <p>Mejorar y decorar mi casa</p>
       <button>Ver más</button>
     </div>
-    <div class="card">
+    <div class="card green" data-aos="fade-up">
       <p>Restaurantes y experiencias</p>
       <button>Ver más</button>
     </div>
-    <div class="card">
+    <div class="card blue" data-aos="fade-up">
       <p>Salud y bienestar</p>
       <button>Ver más</button>
     </div>
@@ -255,34 +181,33 @@
   <p class="subtitle">Encuentra tus cupones aquí. Promociones exclusivas.</p>
 
   <div class="card-grid">
-    <div class="card">
-      <img src="https://cdn.samsclub.com.mx/media/porton-logo.png" alt="El Portón">
+    <div class="card" data-aos="zoom-in">
+      <img src="https://cdn.samsclub.com.mx/media/porton-logo.png" alt="El Portón" style="height:50px; margin-bottom:10px;">
       <h4>El Portón</h4>
       <p>15% de descuento.</p>
       <button>Ver detalles</button>
     </div>
-    <div class="card">
-      <img src="https://cdn.samsclub.com.mx/media/hooters-logo.png" alt="Hooters">
+    <div class="card" data-aos="zoom-in">
+      <img src="https://cdn.samsclub.com.mx/media/hooters-logo.png" alt="Hooters" style="height:50px; margin-bottom:10px;">
       <h4>Hooters</h4>
       <p>15% de descuento.</p>
       <button>Ver detalles</button>
     </div>
-    <div class="card">
-      <img src="https://cdn.samsclub.com.mx/media/moshimoshi-logo.png" alt="Moshi Moshi">
+    <div class="card" data-aos="zoom-in">
+      <img src="https://cdn.samsclub.com.mx/media/moshimoshi-logo.png" alt="Moshi Moshi" style="height:50px; margin-bottom:10px;">
       <h4>Moshi Moshi</h4>
       <p>10% de descuento.</p>
       <button>Ver detalles</button>
     </div>
-    <div class="card">
-      <img src="https://cdn.samsclub.com.mx/media/vips-logo.png" alt="Vips">
+    <div class="card" data-aos="zoom-in">
+      <img src="https://cdn.samsclub.com.mx/media/vips-logo.png" alt="Vips" style="height:50px; margin-bottom:10px;">
       <h4>Vips</h4>
-      <p>20% de descuento en $199 min.</p>
+      <p>20% de descuento en consumo mínimo de $199.</p>
       <button>Ver detalles</button>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <h3>Síguenos en nuestras redes sociales</h3>
   <div style="margin: 20px 0;">
@@ -303,10 +228,17 @@
 </footer>
 
 <!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-  // Script de contador REAL
+  // Inicializar AOS (animaciones de scroll)
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+
+  // Script de contador real
   const endDate = new Date();
-  endDate.setHours(endDate.getHours() + 24); // Contador a 24 horas
+  endDate.setHours(endDate.getHours() + 24); // Contador 24 horas
 
   function updateCountdown() {
     const now = new Date().getTime();
